@@ -1,3 +1,12 @@
+// ===== WhatsApp direct link =====
+// Ganti nomor di bawah ini dengan nomor WhatsApp asli CV Alsava Utama.
+// Format: kode negara tanpa "+" dan tanpa spasi/strip. Contoh nomor 0812-3456-7890 -> "6281234567890"
+const WA_NUMBER = "6281321411333"; // TODO: ganti dengan nomor WA asli
+const WA_MESSAGE = "Halo Alsava Utama, saya ingin konsultasi...";
+
+const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
+document.querySelectorAll('.wa-link').forEach(el => { el.href = waLink; });
+
 // ===== Menu mobile & header =====
 const hdr = document.getElementById('hdr');
 const mmenu = document.getElementById('mmenu');
